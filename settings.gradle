@@ -1,2 +1,4 @@
-rootProject.name = 'gameday'
+rootProject.name = 'gamecenter'
+
+include 'api'
 

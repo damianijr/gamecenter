@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <title>GameCenter - Game</title>
+    </head>
+    <body>
+
+        <div id="main" class="container-fluid">
+            <h3 class="page-header">New/Edit Game</h3>
+
+            <!-- Formulario !-->
+            <form>
+
+                <!-- Alertas !-->
+                <div class="alert alert-success" style="display: none;" id="success"></div>
+                <div class="alert alert-danger" style="display: none;" id="error"></div>
+                <input type="hidden" id="self" name="self" />
+
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <label for="time">Date & Time </label>
+                        <input type="datetime-local" class="form-control" id="time" name="time" required />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label for="away">Away </label>
+                        <select name="away" id="away" class="form-control teams" required>
+                            <option></option>
+                            <option>Corinthians</option>
+                            <option>Palmeiras</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="away">&nbsp;</label>
+                        <input type="number" class="form-control" id="awayScore" name="awayScore" value="0" required />
+                    </div>
+                    <div class="form-group col-md-1" style="width: auto;">
+                        <label>&nbsp;</label>
+                        <div style="font-size: 1.7em;">X</div>
+                    </div>
+
+                    <div class="form-group col-md-1">
+                        <label>&nbsp;</label>
+                        <input type="number" class="form-control" id="homeScore" name="homeScore" value="0" required />
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="away">Home </label>
+                        <select name="home" id="home" class="form-control teams" required>
+                            <option></option>
+                            <option>Corinthians</option>
+                            <option>Palmeiras</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="actions" class="row">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="reset" class="btn btn-default">Cancel</button>
+                    </div>
+                </div>
+            </form>
+            <!-- /Formulario !-->
+
+            <!-- Listagem !-->
+            <h3 class="page-header">Teams</h3>
+            <div id="list" class="row">
+
+                <div id="list-table" class="table-responsive col-md-12">
+                    <table class="table table-striped" cellspacing="0" cellpadding="0">
+                        <thead>
+                            <tr>
+                                <th width="15%">Date & Time</th>
+                                <th width="25%">Home</th>
+                                <th width="10%">Home Score</th>
+                                <th width="10%">Away Score</th>
+                                <th width="25%">Away</th>
+                                <th width="15%" class="actions">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10/10/1910 11:30</td>
+                                <td>Corinthians</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>Palmeiras</td>
+                                <td class="actions">
+                                    <a class="btn btn-warning btn-xs" href="edit.html">Edit</a>
+                                    <a class="btn btn-danger btn-xs"  href="#">Delete</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- /Listagem !-->
+        </div>
+
+
+
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/CrudAPI.js"></script>
+        <script src="js/Messages.js"></script>
+        <script src="js/GamePresentation.js"></script>
+    </body>
+</html>

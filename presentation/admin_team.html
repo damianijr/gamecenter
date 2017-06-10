@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <title>GameCenter - Team</title>
+    </head>
+    <body>
+
+        <div id="main" class="container-fluid">
+            <h3 class="page-header">New/Edit Teams</h3>
+
+            <!-- Formulario !-->
+            <form>
+
+                <!-- Alertas !-->
+                <div class="alert alert-success" style="display: none;" id="success"></div>
+                <div class="alert alert-danger" style="display: none;" id="error"></div>
+                <input type="hidden" id="self" name="self" />
+
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="name">Name </label>
+                        <input type="text" class="form-control" id="name" name="name"  placeholder="EX: Corinthians, Palmeiras" required />
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="foundation">Foundation </label>
+                        <input type="date" class="form-control" id="foundation" name="foundation" placeholder="yyyy-mm-dd" required />
+                    </div>
+                </div>
+
+                <div id="actions" class="row">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="reset" class="btn btn-default">Cancel</button>
+                    </div>
+                </div>
+            </form>
+            <!-- /Formulario !-->
+
+            <!-- Listagem !-->
+            <h3 class="page-header">Teams</h3>
+            <div id="list" class="row">
+
+                <div id="list-table" class="table-responsive col-md-12">
+                    <table class="table table-striped" cellspacing="0" cellpadding="0">
+                        <thead>
+                            <tr>
+                                <th width="70%">Nome</th>
+                                <th width="15%">Foundation</th>
+                                <th width="15%" class="actions">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Corinthians</td>
+                                <td>10/10/1910</td>
+                                <td class="actions">
+                                    <a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
+                                    <a class="btn btn-warning btn-xs" href="edit.html">Editar</a>
+                                    <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- /Listagem !-->
+        </div>
+
+
+
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/CrudAPI.js"></script>
+        <script src="js/Messages.js"></script>
+        <script src="js/TeamPresentation.js"></script>
+
+    </body>
+</html>

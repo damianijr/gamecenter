@@ -1,0 +1,221 @@
+{
+	"variables": [],
+	"info": {
+		"name": "GameCenter",
+		"_postman_id": "059fd50f-0baa-db0f-3f24-d14a7b91f578",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Game",
+			"description": "",
+			"item": [
+				{
+					"name": "http://localhost:8080/games",
+					"request": {
+						"url": "http://localhost:8080/games",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/games",
+					"request": {
+						"url": "http://localhost:8080/games",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"time\": \"2017-04-25T20:52:53\",\n\t\"homeScore\": 0,\n\t\"awayScore\": 0,\n\t\"home\": \"http://localhost:8080/team/1\",\n\t\"away\": \"http://localhost:8080/team/2\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/games?projection=gameCenter",
+					"request": {
+						"url": "http://localhost:8080/games?projection=gameCenter",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/games copy",
+					"request": {
+						"url": "http://localhost:8080/games",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"time\": \"2017-04-25T20:52:53\",\n\t\"homeScore\": 0,\n\t\"awayScore\": 0,\n\t\"home\": \"http://localhost:8080/team/1\",\n\t\"away\": \"http://localhost:8080/team/2\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GameComment",
+			"description": "",
+			"item": [
+				{
+					"name": "http://localhost:8080/gameComments",
+					"request": {
+						"url": "http://localhost:8080/gameComments",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/gameComments",
+					"request": {
+						"url": "http://localhost:8080/gameComments",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user\": \"damianijr\",\n\t\"comment\": \"Muito boa essa API, hein!\",\n\t\"dateTime\": \"2017-01-01T20:00:00\",\n\t\"gameId\": 1\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GameDetail",
+			"description": "",
+			"item": [
+				{
+					"name": "http://localhost:8080/gameDetail/1",
+					"request": {
+						"url": "http://localhost:8080/gameDetail/1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Team",
+			"description": "",
+			"item": [
+				{
+					"name": "http://localhost:8080/teams",
+					"request": {
+						"url": "http://localhost:8080/teams",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/teams",
+					"request": {
+						"url": "http://localhost:8080/teams",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Corinthians 1\",\n\t\"foundation\": \"1910-10-10\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/teams/1",
+					"request": {
+						"url": "http://localhost:8080/teams/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Corinthians Senior\",\n\t\"foundation\": \"1910-10-10\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/teams/1",
+					"request": {
+						"url": "http://localhost:8080/teams/1",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"foundation\": \"1910-01-01\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/teams/5",
+					"request": {
+						"url": "http://localhost:8080/teams/5",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

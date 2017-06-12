@@ -13,7 +13,5 @@ import java.util.Collection;
 @CrossOrigin("*")
 @RepositoryRestResource
 public interface GameCommentRepository extends MongoRepository<GameComment, String> {
-
     Collection<GameComment> findByGameId(Long gameId);
-
 }

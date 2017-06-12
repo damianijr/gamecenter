@@ -1,9 +1,8 @@
-package com.gameday.domain.resource;
+package com.gameday.resource;
 
-import com.gameday.domain.service.GameDetailService;
-import com.gameday.domain.vo.GameDetailVO;
+import com.gameday.service.GameDetailService;
+import com.gameday.vo.GameDetailVO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.rest.webmvc.RepositoryRestController;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

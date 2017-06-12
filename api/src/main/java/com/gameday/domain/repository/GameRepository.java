@@ -17,11 +17,9 @@ import java.util.Optional;
 @CrossOrigin("*")
 @RepositoryRestResource
 public interface GameRepository extends CrudRepository<Game, Long> {
-
     @Query("SELECT g FROM Game g WHERE away.name = :teamName or home.name = :teamName")
     Collection<Game> gamesByTeamName(@Param("teamName") String teamName);
 
     @RestResource(exported = false)
     Optional<Game> findById(final Long id);
-
 }

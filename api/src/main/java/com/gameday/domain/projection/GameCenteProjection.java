@@ -12,9 +12,6 @@ import java.time.LocalDateTime;
  */
 @Projection(name = "gameCenter", types =  { Game.class, Team.class})
 public interface GameCenteProjection {
-
-    LocalDateTime getTime();
-
     @Value("#{target.away.name}")
     String getAway();
     int getAwayScore();

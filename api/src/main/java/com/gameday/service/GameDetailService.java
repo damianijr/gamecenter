@@ -1,9 +1,8 @@
-package com.gameday.domain.service;
+package com.gameday.service;
 
-import com.gameday.domain.GameComment;
 import com.gameday.domain.repository.GameCommentRepository;
 import com.gameday.domain.repository.GameRepository;
-import com.gameday.domain.vo.GameDetailVO;
+import com.gameday.vo.GameDetailVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

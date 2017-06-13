@@ -1,4 +1,4 @@
-# Database file
+# Database files
 data/
 
 # Compiled class file
@@ -23,7 +23,8 @@ hs_err_pid*
 
 #gradle
 .gradle
-/build/
+build/
+/out/
 
 # Ignore Gradle GUI config
 gradle-app.setting

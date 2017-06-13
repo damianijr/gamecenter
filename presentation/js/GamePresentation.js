@@ -14,6 +14,7 @@ class GamePresentation {
 
     static resetForm() {
         $('form')[0].reset();
+        $('form input:hidden').val('');
     }
 
     static loadGame(game) {

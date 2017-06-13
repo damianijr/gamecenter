@@ -20,7 +20,6 @@ public class Game {
     @Column(nullable = false)
     LocalDateTime time;
 
-
     @ManyToOne
     @JoinColumn(nullable = false)
     Team home;

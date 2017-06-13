@@ -14,6 +14,7 @@ class TeamPresentation {
 
     static resetForm() {
         $('form')[0].reset();
+        $('form input:hidden').val('');
     }
 
     static loadTeam(team) {

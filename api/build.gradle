@@ -1,19 +1,33 @@
 group 'gamecenter'
 version '1.0-SNAPSHOT'
-apply plugin: 'java'
 
 repositories {
     mavenCentral()
 }
 
-ext {
-    springBootVersion = "1.5.4.RELEASE"
-    hibernateVersion = "5.1.0.Final"
-    jpaVersion = "1.0.0.Final"
-    mysqlVersion = "5.1.13"
-    jacksonDataTypeVersion = "2.8.8"
-    lombokVersion = "1.16.16"
+buildscript {
+    ext {
+        springBootVersion = "1.5.4.RELEASE"
+        hibernateVersion = "5.1.0.Final"
+        jpaVersion = "1.0.0.Final"
+        mysqlVersion = "5.1.13"
+        jacksonDataTypeVersion = "2.8.8"
+        lombokVersion = "1.16.16"
+    }
+
+    repositories {
+        maven { url "http://repo.spring.io/libs-snapshot" }
+    }
+
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion")
+    }
 }
+
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'org.springframework.boot'
+
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-data-rest:$springBootVersion")
